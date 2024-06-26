@@ -1,6 +1,10 @@
 # Unified Auto-Encoding with Masked Diffusion
 This is the offical Jax implementation of [Unified Mask Diffusion](https://arxiv.org/abs/2406.17688). You can use this codebase to train MAE, UMD, and DiT. It also includes auto-evaluation for few-shot linear probing and FID/IS scores for generation.
 
+<p align="center">
+<img width="602" alt="Screenshot 2024-06-26 at 1 22 17 PM" src="https://github.com/philippe-eecs/small-vision/assets/13482152/b083877c-2a06-46dc-8dab-e45072e7c069">
+</p>
+
 This codebase is largely pulled from [Big Vision](https://github.com/google-research/big_vision) codebase. It implementes a generic auto-encoder class that was developed on imagenet-2012 and meant to be used for self-supervised learning on the 100-shot imagenet probing. It also allows self-supervised methods to be fine-tuned on labels for class-conditional generation.
 
 Please visit the [Big Vision](https://github.com/google-research/big_vision) repo for more details on how to setup TPUs and the workflow of the codebase. This experience will be best if you have access to TPUs, but the original experiments done in this paper were tested on 64x64 imagenet with GPUs.
