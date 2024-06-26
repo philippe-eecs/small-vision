@@ -1,0 +1,17 @@
+absl-py
+clu
+einops
+flax
+optax
+git+https://github.com/google/flaxformer
+git+https://github.com/akolesnikoff/panopticapi.git@mute
+overrides
+wandb
+tensorflow<2.16
+tfds-nightly
+tensorflow-addons
+tensorflow-text
+tensorflow-gan
+keras<3.0.0
+mediapipe-model-maker
+diffusers
