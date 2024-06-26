@@ -9,6 +9,8 @@ Weights + Colab to play around coming soon!
 
 Feel free to bring up a github issue or send me an email if you have any questions or comments! philippehansen@utexas.edu 
 
+We thank the TRC program from [Google Cloud Platform](https://cloud.google.com/) for access to v4-TPU Pods. We also thank [Akash Network](https://akash.network/) and [TACC](https://tacc.utexas.edu/) for access to A100s. 
+
 # Important File Locations
 
 - Main Config File `big_vision/configs/ae_i1k.py`
