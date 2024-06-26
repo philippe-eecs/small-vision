@@ -7,12 +7,22 @@ Please visit the [Big Vision](https://github.com/google-research/big_vision) rep
 
 Weights + Colab to play around coming soon! 
 
+Feel free to bring up a github issue or send me an email if you have any questions or comments! philippehansen@utexas.edu 
+
 # Important File Locations
 
 - Main Config File `big_vision/configs/ae_i1k.py`
 - Auto-Encoder Implementation `big_vision/models/ae.py`
 - Auto-Encoder Trainer `big_vision/trainers/train_ae.py`
 - FID/IS Implementation `big_vision/evaluators/fid.py`
+
+# Setting things up
+
+You will need to download imagenet-2012 and preprocess it into the [tfds format](https://github.com/google-research/big_vision?tab=readme-ov-file#preparing-tfds-data) onto a google bucket. Then you will need to setup your [TPU pod](https://github.com/google-research/big_vision?tab=readme-ov-file#cloud-tpu-vm-setup). 
+
+You can access TPUs easily through the [TRC program](https://sites.research.google/trc/about/) if you are an academic looking to do research!
+
+This code base was also extensively tested on GPUs with 64x64 Imagenet. Simply modify the TFDS_DATA_DIR/workdir to the one that is local to your machine/cluster. Instead of `bash big_vision/run_tpu.sh big_vision.train_tpu` use `python3 -m big_vision.train`. I've included an ibrun script that was tested with an distributed multiprocess HPC with A100s, but it hasn't been tested in a while.
 
 # Pre-Training Commands for Self-Supervised Experiments
 
@@ -53,6 +63,7 @@ Planned short-term:
 - Preprocessed VAE Latents to Speed up Latent Diffusion.
 - Find ways to reduce computational load of AdaLN modulation. 
 - Look into quantization (FSQ).
+- 64x64 Supervised Imagenet-1k (meant for small scale training)
 
 # Citing the codebase
 
